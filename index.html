@@ -3,102 +3,132 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Orvian Digital | Web Design & Development</title>
-
-<meta name="description" content="Orvian Digital builds affordable websites and custom solutions for small businesses. Professional frontend, backend and full-stack development.">
-<meta property="og:title" content="Orvian Digital">
-<meta property="og:description" content="Affordable Websites for Small Businesses">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://orvianstudio.com">
-
-<link rel="icon" type="image/png" href="favicon.png">
+<title>Orvian Digital | Websites for Small Businesses</title>
 
 <style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: Arial, Helvetica, sans-serif;
+}
+
 body{
-    margin:0;
-    font-family: Arial, Helvetica, sans-serif;
-    background:#0f172a;
-    color:white;
+background:#0b1c2d;
+color:white;
+line-height:1.6;
 }
+
 header{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:20px 40px;
-    background:#0b1220;
+background:#0f2a44;
+padding:20px;
+text-align:center;
 }
-.logo{
-    font-size:22px;
-    font-weight:bold;
+
+header h1{
+color:#38bdf8;
+font-size:28px;
 }
+
+header p{
+font-size:14px;
+color:#ddd;
+margin-top:5px;
+}
+
+nav{
+margin-top:15px;
+}
+
 nav a{
-    color:white;
-    text-decoration:none;
-    margin-left:20px;
+color:white;
+text-decoration:none;
+margin:0 10px;
+font-size:14px;
 }
+
 .hero{
-    text-align:center;
-    padding:100px 20px;
+padding:60px 20px;
+text-align:center;
 }
-.hero h1{
-    font-size:40px;
+
+.hero h2{
+font-size:26px;
+margin-bottom:15px;
 }
+
 .hero p{
-    color:#cbd5e1;
-    max-width:600px;
-    margin:auto;
+max-width:600px;
+margin:auto;
+margin-bottom:20px;
+color:#ccc;
 }
+
 .btn{
-    display:inline-block;
-    margin-top:20px;
-    padding:12px 25px;
-    background:#2563eb;
-    color:white;
-    text-decoration:none;
-    border-radius:6px;
+display:inline-block;
+padding:12px 20px;
+margin:8px;
+background:#22c55e;
+color:white;
+text-decoration:none;
+border-radius:6px;
+font-size:14px;
 }
+
+.btn-secondary{
+background:#38bdf8;
+}
+
 .section{
-    padding:80px 20px;
-    max-width:1000px;
-    margin:auto;
+padding:50px 20px;
+text-align:center;
 }
+
+.section h2{
+margin-bottom:20px;
+color:#38bdf8;
+}
+
 .cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:20px;
+margin-top:30px;
 }
+
 .card{
-    background:#1e293b;
-    padding:20px;
-    border-radius:8px;
+background:#132c47;
+padding:25px;
+border-radius:8px;
+width:280px;
 }
-.card h3{
-    margin-top:0;
-}
+
 .price{
-    color:#38bdf8;
-    font-weight:bold;
+color:#22c55e;
+font-weight:bold;
+margin-top:10px;
 }
+
 footer{
-    text-align:center;
-    padding:30px;
-    background:#0b1220;
-    margin-top:60px;
+background:#0f2a44;
+padding:30px;
+text-align:center;
+margin-top:40px;
 }
-input, textarea{
-    width:100%;
-    padding:10px;
-    margin-top:10px;
-    border:none;
-    border-radius:5px;
+
+footer a{
+color:#38bdf8;
+text-decoration:none;
+display:block;
+margin:5px 0;
 }
-button{
-    margin-top:15px;
-    padding:10px 20px;
-    background:#2563eb;
-    border:none;
-    color:white;
-    border-radius:5px;
+
+@media(max-width:768px){
+.cards{
+flex-direction:column;
+align-items:center;
+}
 }
 </style>
 </head>
@@ -106,7 +136,9 @@ button{
 <body>
 
 <header>
-<div class="logo">Orvian Digital</div>
+<h1>Orvian Digital</h1>
+<p>Websites Built for Jamaican Small Businesses 🇯🇲</p>
+
 <nav>
 <a href="#services">Services</a>
 <a href="#pricing">Pricing</a>
@@ -115,73 +147,94 @@ button{
 </header>
 
 <section class="hero">
-<h1>Affordable Websites for Small Businesses</h1>
-<p>Professional frontend, backend and full-stack development tailored for modern businesses.</p>
-<a href="#contact" class="btn">Get Started</a>
+<h2>Affordable Websites That Grow Your Business</h2>
+<p>
+We design clean, secure, and mobile-friendly websites for entrepreneurs across Jamaica.
+From simple business pages to full backend systems — we make technology simple.
+</p>
+
+<a class="btn" href="https://wa.me/18768021941?text=Hi%20Orvian%20Digital%2C%20I%20would%20like%20to%20build%20a%20website." target="_blank">
+Message Us on WhatsApp
+</a>
+
+<a class="btn btn-secondary" href="https://instagram.com/orviandigitalstudio" target="_blank">
+Follow on Instagram
+</a>
+
 </section>
 
 <section id="services" class="section">
 <h2>Our Services</h2>
+
 <div class="cards">
+
 <div class="card">
 <h3>Website Design</h3>
-<p>Clean and responsive business websites.</p>
+<p>Modern, responsive business websites.</p>
 </div>
+
 <div class="card">
 <h3>Backend Development</h3>
-<p>Secure and scalable backend systems.</p>
+<p>Secure dashboards & full functionality systems.</p>
 </div>
+
 <div class="card">
-<h3>Full Stack Websites</h3>
-<p>Complete secure and functional platforms.</p>
+<h3>Monthly Maintenance</h3>
+<p>We manage & update your website monthly.</p>
 </div>
+
 </div>
 </section>
 
 <section id="pricing" class="section">
-<h2>Pricing</h2>
+<h2>Service Pricing</h2>
+
 <div class="cards">
+
 <div class="card">
-<h3>Frontend Website</h3>
+<h3>Basic Front Page</h3>
+<p>Simple Business Website</p>
 <p class="price">$100 USD</p>
-<p>Simple and affordable business website.</p>
+<p>$15,500 JMD</p>
 </div>
 
 <div class="card">
-<h3>Backend Development</h3>
+<h3>Frontend + Backend</h3>
+<p>Admin Dashboard & Secure System</p>
 <p class="price">$230 USD</p>
-<p>Backend system integration and setup.</p>
+<p>$35,650 JMD</p>
 </div>
 
 <div class="card">
-<h3>Secure Full Website</h3>
+<h3>Full Secured System</h3>
+<p>Fully Functional Backend Website</p>
 <p class="price">$350 USD</p>
-<p>Fully functional and secured website solution.</p>
+<p>$54,250 JMD</p>
 </div>
 
 <div class="card">
-<h3>Maintenance</h3>
+<h3>Website Maintenance</h3>
+<p>Monthly Management & Updates</p>
 <p class="price">$10 USD / month</p>
-<p>Website management and updates subscription.</p>
+<p>$1,550 JMD / month</p>
 </div>
+
 </div>
 </section>
 
 <section id="contact" class="section">
-<h2>Contact Us</h2>
-<p>Call or WhatsApp: <strong>802-1941</strong> | <strong>369-2330</strong></p>
-<p>Email: <strong>OrvianStudio@gmail.com</strong></p>
+<h2>Contact Orvian Digital</h2>
 
-<form>
-<input type="text" placeholder="Your Name">
-<input type="email" placeholder="Your Email">
-<textarea rows="4" placeholder="Your Message"></textarea>
-<button type="submit">Send Message</button>
-</form>
+<p>📲 WhatsApp: <a href="https://wa.me/18768021941" target="_blank" style="color:#22c55e;">802-1941</a></p>
+<p>📲 Secondary: <a href="https://wa.me/18763692330" target="_blank" style="color:#22c55e;">369-2330</a></p>
+<p>📩 Email: <a href="mailto:OrvianStudio@gmail.com" style="color:#38bdf8;">OrvianStudio@gmail.com</a></p>
+<p>📸 Instagram: <a href="https://instagram.com/orviandigitalstudio" target="_blank" style="color:#38bdf8;">@orviandigitalstudio</a></p>
+<p>🌐 Website: <a href="https://orvianstudio.com" style="color:#38bdf8;">orvianstudio.com</a></p>
+
 </section>
 
 <footer>
-© 2025 Orvian Digital. All Rights Reserved.
+<p>© 2026 Orvian Digital. All Rights Reserved.</p>
 </footer>
 
 </body>
