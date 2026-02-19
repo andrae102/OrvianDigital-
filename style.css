@@ -1,1 +1,150 @@
+:root {
+  --primary: #0B3D91;
+  --accent: #0E76A8;
+  --light-bg: #F4F6F8;
+  --dark-bg: #0A1F44;
+  --text-dark: #222;
+  --text-light: #ffffff;
+}
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: var(--light-bg);
+  color: var(--text-dark);
+  transition: 0.3s ease;
+}
+
+/* NAVIGATION */
+
+nav {
+  position: fixed;
+  width: 100%;
+  padding: 20px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.3s ease;
+  z-index: 1000;
+}
+
+nav.scrolled {
+  background: var(--primary);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  margin-left: 20px;
+  font-weight: 500;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+
+/* HERO */
+
+.hero {
+  height: 100vh;
+  background: linear-gradient(rgba(11,61,145,0.7), rgba(11,61,145,0.7)),
+              url('https://images.unsplash.com/photo-1498050108023-c5249f4df085');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  color: white;
+}
+
+.hero h1 {
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  max-width: 600px;
+  margin: auto;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.btn {
+  padding: 12px 25px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 5px;
+}
+
+.btn-primary {
+  background: #25D366;
+  color: white;
+}
+
+.btn-secondary {
+  background: white;
+  color: var(--primary);
+}
+
+/* SECTION */
+
+section {
+  padding: 80px 60px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 30px;
+}
+
+.cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  width: 280px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+/* FOOTER */
+
+footer {
+  background: var(--primary);
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* DARK MODE */
+
+body.dark {
+  background: var(--dark-bg);
+  color: white;
+}
+
+body.dark .card {
+  background: #142a5c;
+}
+
+body.dark nav.scrolled {
+  background: #061634;
+}
