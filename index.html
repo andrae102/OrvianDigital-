@@ -1,57 +1,188 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Orvian Digital</title>
-<link rel="stylesheet" href="style.css">
+<title>Orvian Digital | Web Design & Development</title>
+
+<meta name="description" content="Orvian Digital builds affordable websites and custom solutions for small businesses. Professional frontend, backend and full-stack development.">
+<meta property="og:title" content="Orvian Digital">
+<meta property="og:description" content="Affordable Websites for Small Businesses">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://orvianstudio.com">
+
+<link rel="icon" type="image/png" href="favicon.png">
+
+<style>
+body{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    background:#0f172a;
+    color:white;
+}
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 40px;
+    background:#0b1220;
+}
+.logo{
+    font-size:22px;
+    font-weight:bold;
+}
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+}
+.hero{
+    text-align:center;
+    padding:100px 20px;
+}
+.hero h1{
+    font-size:40px;
+}
+.hero p{
+    color:#cbd5e1;
+    max-width:600px;
+    margin:auto;
+}
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 25px;
+    background:#2563eb;
+    color:white;
+    text-decoration:none;
+    border-radius:6px;
+}
+.section{
+    padding:80px 20px;
+    max-width:1000px;
+    margin:auto;
+}
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+.card{
+    background:#1e293b;
+    padding:20px;
+    border-radius:8px;
+}
+.card h3{
+    margin-top:0;
+}
+.price{
+    color:#38bdf8;
+    font-weight:bold;
+}
+footer{
+    text-align:center;
+    padding:30px;
+    background:#0b1220;
+    margin-top:60px;
+}
+input, textarea{
+    width:100%;
+    padding:10px;
+    margin-top:10px;
+    border:none;
+    border-radius:5px;
+}
+button{
+    margin-top:15px;
+    padding:10px 20px;
+    background:#2563eb;
+    border:none;
+    color:white;
+    border-radius:5px;
+}
+</style>
 </head>
 
 <body>
 
+<header>
+<div class="logo">Orvian Digital</div>
 <nav>
-  <div class="logo">Orvian Digital</div>
-  <div>
-    <a href="index.html">Home</a>
-    <a href="pricing.html">Pricing</a>
-    <a href="contact.html">Contact</a>
-    <a href="#" onclick="toggleDarkMode()">Dark Mode</a>
-  </div>
+<a href="#services">Services</a>
+<a href="#pricing">Pricing</a>
+<a href="#contact">Contact</a>
 </nav>
+</header>
 
-<div class="hero">
-  <div>
-    <h1>Affordable Websites for Growing Businesses</h1>
-    <p>Professional, mobile-friendly websites built for small businesses across Jamaica and the Caribbean.</p>
-    <a href="contact.html"><button class="btn btn-primary">Get Started</button></a>
-    <a href="pricing.html"><button class="btn btn-secondary">View Pricing</button></a>
-  </div>
+<section class="hero">
+<h1>Affordable Websites for Small Businesses</h1>
+<p>Professional frontend, backend and full-stack development tailored for modern businesses.</p>
+<a href="#contact" class="btn">Get Started</a>
+</section>
+
+<section id="services" class="section">
+<h2>Our Services</h2>
+<div class="cards">
+<div class="card">
+<h3>Website Design</h3>
+<p>Clean and responsive business websites.</p>
+</div>
+<div class="card">
+<h3>Backend Development</h3>
+<p>Secure and scalable backend systems.</p>
+</div>
+<div class="card">
+<h3>Full Stack Websites</h3>
+<p>Complete secure and functional platforms.</p>
+</div>
+</div>
+</section>
+
+<section id="pricing" class="section">
+<h2>Pricing</h2>
+<div class="cards">
+<div class="card">
+<h3>Frontend Website</h3>
+<p class="price">$100 USD</p>
+<p>Simple and affordable business website.</p>
 </div>
 
-<section>
-  <h2>Our Services</h2>
-  <div class="cards">
-    <div class="card">
-      <h3>Website Design</h3>
-      <p>Clean responsive websites for startups and small businesses.</p>
-    </div>
-    <div class="card">
-      <h3>Backend Development</h3>
-      <p>Secure dashboards, login systems and database integration.</p>
-    </div>
-    <div class="card">
-      <h3>Maintenance</h3>
-      <p>Ongoing updates, security monitoring and optimization.</p>
-    </div>
-  </div>
+<div class="card">
+<h3>Backend Development</h3>
+<p class="price">$230 USD</p>
+<p>Backend system integration and setup.</p>
+</div>
+
+<div class="card">
+<h3>Secure Full Website</h3>
+<p class="price">$350 USD</p>
+<p>Fully functional and secured website solution.</p>
+</div>
+
+<div class="card">
+<h3>Maintenance</h3>
+<p class="price">$10 USD / month</p>
+<p>Website management and updates subscription.</p>
+</div>
+</div>
+</section>
+
+<section id="contact" class="section">
+<h2>Contact Us</h2>
+<p>Call or WhatsApp: <strong>802-1941</strong> | <strong>369-2330</strong></p>
+<p>Email: <strong>OrvianStudio@gmail.com</strong></p>
+
+<form>
+<input type="text" placeholder="Your Name">
+<input type="email" placeholder="Your Email">
+<textarea rows="4" placeholder="Your Message"></textarea>
+<button type="submit">Send Message</button>
+</form>
 </section>
 
 <footer>
-  © 2026 Orvian Digital. All Rights Reserved.
+© 2025 Orvian Digital. All Rights Reserved.
 </footer>
 
-<a href="https://wa.me/18768021941" class="whatsapp-float">💬</a>
-
-<script src="script.js"></script>
 </body>
 </html>
