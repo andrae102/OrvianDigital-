@@ -3,246 +3,202 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Orvian Digital | Elite Digital Systems</title>
+<title>Orvian Digital | Digital Systems Architect</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
+scroll-behavior:smooth;
 }
 
 body{
 font-family:'Inter',sans-serif;
-background:#05070f;
-color:white;
-overflow-x:hidden;
-cursor:none;
+background:#0c1117;
+color:#e5e7eb;
+line-height:1.7;
 }
 
-/* CUSTOM CURSOR */
-.cursor{
-width:20px;
-height:20px;
-border:2px solid #00ffcc;
-border-radius:50%;
+nav{
 position:fixed;
-pointer-events:none;
-transform:translate(-50%,-50%);
-z-index:9999;
-}
-
-/* LOADER */
-.loader{
-position:fixed;
+top:0;
 width:100%;
-height:100%;
-background:#05070f;
 display:flex;
-justify-content:center;
+justify-content:space-between;
 align-items:center;
-z-index:9998;
-font-family:'Orbitron',sans-serif;
-font-size:30px;
-letter-spacing:4px;
-color:#00ffcc;
+padding:24px 10%;
+background:rgba(12,17,23,0.85);
+backdrop-filter:blur(12px);
+border-bottom:1px solid #1f2937;
 }
 
-/* HERO */
+.logo{
+font-weight:600;
+letter-spacing:1px;
+color:#10b981;
+}
+
+nav a{
+text-decoration:none;
+color:#9ca3af;
+margin-left:30px;
+font-size:14px;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#10b981;
+}
+
 .hero{
 height:100vh;
 display:flex;
-align-items:center;
+flex-direction:column;
 justify-content:center;
-text-align:center;
-position:relative;
-z-index:1;
-}
-
-#particles-js{
-position:absolute;
-width:100%;
-height:100%;
-z-index:-1;
+padding:0 10%;
+max-width:1000px;
 }
 
 .hero h1{
-font-size:60px;
+font-size:56px;
+font-weight:700;
 margin-bottom:20px;
-}
-
-.hero span{
-color:#00ffcc;
+color:white;
 }
 
 .hero p{
-color:#9aa4b2;
 font-size:20px;
+color:#9ca3af;
+max-width:700px;
 margin-bottom:30px;
 }
 
+.highlight{
+color:#10b981;
+}
+
 .btn{
-padding:18px 40px;
-background:#00ffcc;
-color:black;
-border-radius:40px;
-font-weight:700;
+display:inline-block;
+padding:14px 30px;
+border:1px solid #10b981;
+color:#10b981;
 text-decoration:none;
+border-radius:6px;
+font-weight:600;
 transition:0.3s;
 }
 
 .btn:hover{
-background:#00d4aa;
-transform:scale(1.05);
+background:#10b981;
+color:#0c1117;
 }
 
-/* SERVICES */
-.services{
+.section{
 padding:120px 10%;
-background:#0c1120;
-text-align:center;
+max-width:1100px;
+}
+
+.section h2{
+font-size:32px;
+margin-bottom:30px;
 }
 
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:40px;
-margin-top:60px;
+margin-top:40px;
 }
 
 .card{
-background:#121a30;
-padding:40px;
-border-radius:20px;
-border:1px solid #1e2a48;
+background:#111827;
+padding:30px;
+border-radius:10px;
+border:1px solid #1f2937;
 transition:0.3s;
-transform-style:preserve-3d;
 }
 
 .card:hover{
-box-shadow:0 0 30px rgba(0,255,204,0.2);
-}
-
-/* CTA */
-.cta{
-padding:100px 10%;
-text-align:center;
-background:linear-gradient(90deg,#00ffcc,#0077ff);
-color:black;
-}
-
-.cta a{
-background:black;
-color:#00ffcc;
-padding:15px 35px;
-border-radius:40px;
-text-decoration:none;
-font-weight:700;
+border-color:#10b981;
+box-shadow:0 0 20px rgba(16,185,129,0.15);
 }
 
 footer{
-padding:60px;
-text-align:center;
-background:#03050c;
+padding:60px 10%;
+color:#6b7280;
+border-top:1px solid #1f2937;
+margin-top:100px;
+}
+
+@media(max-width:768px){
+.hero h1{
+font-size:36px;
+}
 }
 </style>
 </head>
 
 <body>
 
-<div class="loader">ORVIAN DIGITAL</div>
-<div class="cursor"></div>
-
-<div id="particles-js"></div>
+<nav>
+<div class="logo">Orvian Digital</div>
+<div>
+<a href="#architecture">Architecture</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
 
 <section class="hero">
-<div>
-<h1>We Build <span>Elite Digital Systems</span></h1>
-<p>Modern architecture. Secure backend systems. Built for domination.</p>
-<a href="https://wa.me/18768021941" class="btn" target="_blank">Launch With Us</a>
-</div>
+<h1>
+Digital Infrastructure <span class="highlight">Engineered For The Future</span>
+</h1>
+<p>
+Founded by Andrae Cunningham, 24-year-old Digital Systems Architect focused on building secure, scalable and intelligent digital ecosystems for modern businesses.
+</p>
+
+<a href="https://wa.me/18768021941" class="btn" target="_blank">
+Start a Project
+</a>
 </section>
 
-<section class="services">
-<h2>Core Capabilities</h2>
+<section id="architecture" class="section">
+<h2>Core Architecture</h2>
+
 <div class="grid">
 <div class="card">
-<h3>Frontend Engineering</h3>
-<p>Conversion-focused high performance UI systems.</p>
+<h3>Secure Backend Systems</h3>
+<p>Authentication, dashboards and scalable data structures designed for long-term growth.</p>
 </div>
+
 <div class="card">
-<h3>Backend Infrastructure</h3>
-<p>Authentication, dashboards, scalable architecture.</p>
+<h3>High-Performance Interfaces</h3>
+<p>Modern frontend systems built for clarity, trust and measurable conversion.</p>
 </div>
+
 <div class="card">
-<h3>Full Stack Platforms</h3>
-<p>Complete digital ecosystems engineered to scale.</p>
+<h3>Scalable Digital Platforms</h3>
+<p>Full digital ecosystems engineered for automation and expansion.</p>
 </div>
+
 <div class="card">
-<h3>Ongoing Optimization</h3>
-<p>Continuous improvements and performance upgrades.</p>
+<h3>Continuous Optimization</h3>
+<p>Ongoing refinement, security updates and performance upgrades.</p>
 </div>
 </div>
 </section>
 
-<section class="cta">
-<h2>Ready To Build Something Serious?</h2>
-<a href="https://wa.me/18768021941" target="_blank">Start Now</a>
+<section id="contact" class="section">
+<h2>Contact</h2>
+<p>Email: OrvianStudio@gmail.com</p>
+<p>Instagram: @orviandigitalstudio</p>
 </section>
 
 <footer>
-<p>© 2026 Orvian Digital | Built For Scale</p>
-<p>Email: OrvianStudio@gmail.com</p>
-<p><a href="https://instagram.com/orviandigitalstudio" target="_blank">Instagram</a></p>
+© 2026 Orvian Digital — Digital Systems Architect
 </footer>
-
-<script>
-/* LOADER */
-window.addEventListener("load", function(){
-gsap.to(".loader", {opacity:0, duration:1, delay:1});
-setTimeout(()=>{document.querySelector(".loader").style.display="none"},2000);
-});
-
-/* HERO ANIMATION */
-gsap.from(".hero h1", {y:50, opacity:0, duration:1});
-gsap.from(".hero p", {y:50, opacity:0, duration:1, delay:0.3});
-gsap.from(".btn", {y:50, opacity:0, duration:1, delay:0.6});
-
-/* CUSTOM CURSOR */
-const cursor = document.querySelector(".cursor");
-document.addEventListener("mousemove", e=>{
-cursor.style.left = e.clientX + "px";
-cursor.style.top = e.clientY + "px";
-});
-
-/* PARTICLES */
-particlesJS("particles-js", {
-"particles": {
-"number": {"value": 80},
-"size": {"value": 3},
-"color": {"value": "#00ffcc"},
-"line_linked": {"enable": true, "color": "#00ffcc"},
-"move": {"speed": 2}
-}
-});
-
-/* 3D TILT */
-document.querySelectorAll(".card").forEach(card=>{
-card.addEventListener("mousemove", e=>{
-let x = (window.innerWidth/2 - e.pageX)/20;
-let y = (window.innerHeight/2 - e.pageY)/20;
-card.style.transform = `rotateY(${x}deg) rotateX(${y}deg)`;
-});
-card.addEventListener("mouseleave", ()=>{
-card.style.transform = "rotateY(0) rotateX(0)";
-});
-});
-</script>
 
 </body>
 </html>
