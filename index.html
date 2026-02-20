@@ -1,146 +1,191 @@
-<!doctype html>
-<html lang="en" data-bs-theme="dark">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Orvian Digital | Future Caribbean Technology</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Orvian Digital | Digital Infrastructure Platform</title>
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-body {
-  background: #0f172a;
-  color: white;
+body{
+font-family:'Inter',sans-serif;
+background:white;
+color:#111827;
 }
 
-.hero {
-  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)),
-  url('https://images.unsplash.com/photo-1518779578993-ec3579fee39f');
-  background-size: cover;
-  background-position: center;
-  padding: 120px 0;
+.hero{
+padding:140px 0 100px 0;
+background:linear-gradient(180deg,#f8fafc 0%, #ffffff 100%);
 }
 
-.highlight {
-  color: #00ffcc;
+.gradient-text{
+background:linear-gradient(90deg,#2563eb,#7c3aed);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
 }
 
-.card {
-  background: #1e293b;
-  border: 1px solid rgba(0,255,204,0.2);
+.btn-primary{
+background:linear-gradient(90deg,#2563eb,#7c3aed);
+border:none;
+padding:14px 28px;
+font-weight:600;
 }
 
-.footer {
-  background: #0b1220;
+.btn-primary:hover{
+opacity:0.9;
+}
+
+.section{
+padding:100px 0;
+}
+
+.feature-icon{
+width:50px;
+height:50px;
+border-radius:12px;
+background:linear-gradient(135deg,#2563eb,#7c3aed);
+display:flex;
+align-items:center;
+justify-content:center;
+color:white;
+font-weight:bold;
+margin-bottom:20px;
+}
+
+.pricing-card{
+border:1px solid #e5e7eb;
+border-radius:16px;
+padding:40px;
+transition:0.3s;
+}
+
+.pricing-card:hover{
+box-shadow:0 20px 40px rgba(0,0,0,0.08);
+}
+
+.footer{
+background:#f8fafc;
+padding:60px 0;
 }
 </style>
 </head>
 
 <body>
 
-<header>
-<div class="collapse bg-dark" id="navbarHeader">
-<div class="container py-4">
-<h4 class="text-white">Orvian Digital</h4>
-<p class="text-white-50">
-Founded by Andrae Cunningham (24). 
-We build secure, scalable digital systems for Jamaican businesses.
-AI and innovation will shape our future — and we deh yah fi stay.
-</p>
-</div>
-</div>
-
-<div class="navbar navbar-dark bg-dark shadow-sm">
+<!-- NAV -->
+<nav class="navbar navbar-expand-lg bg-white border-bottom">
 <div class="container">
-<a href="#" class="navbar-brand d-flex align-items-center">
-<strong>Orvian Digital</strong>
-</a>
-<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader">
-<span class="navbar-toggler-icon"></span>
-</button>
+<a class="navbar-brand fw-bold" href="#">Orvian Digital</a>
+<div>
+<a href="#pricing" class="btn btn-primary">Start Project</a>
 </div>
 </div>
-</header>
+</nav>
 
-<main>
-
+<!-- HERO -->
 <section class="hero text-center">
 <div class="container">
-<h1 class="display-4 fw-bold">
-Future Tech <span class="highlight">Built From Jamaica 🇯🇲</span>
+<h1 class="display-3 fw-bold">
+Build <span class="gradient-text">Future-Ready Digital Systems</span>
 </h1>
-<p class="lead mt-4">
-We design and engineer digital infrastructure — from business websites
-to secure backend systems. The future is digital. Jamaica must lead.
+
+<p class="lead mt-4 col-lg-8 mx-auto">
+Founded by Andrae Cunningham (24), Orvian Digital helps Jamaican businesses
+launch scalable websites, backend systems, and intelligent digital platforms.
+We believe AI and technology will shape the next era of our economy.
 </p>
-<a href="https://wa.me/18768021941" target="_blank" class="btn btn-success btn-lg mt-3">
+
+<div class="mt-4">
+<a href="https://wa.me/18768021941" target="_blank" class="btn btn-primary me-3">
 Start Your Project
 </a>
+<a href="https://instagram.com/orviandigitalstudio" target="_blank" class="btn btn-outline-dark">
+Follow Us
+</a>
+</div>
 </div>
 </section>
 
-<div class="album py-5">
+<!-- FEATURES -->
+<section class="section">
 <div class="container">
+<div class="row text-center">
 
-<h2 class="text-center mb-5 highlight">Services & Pricing</h2>
-
-<div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
-
-<div class="col">
-<div class="card shadow-sm p-3">
-<h5>Front Page Website</h5>
-<p>Professional business presence.</p>
-<h4 class="highlight">$100 USD</h4>
-</div>
+<div class="col-md-4">
+<div class="feature-icon mx-auto">01</div>
+<h5 class="fw-bold">Secure Backend Systems</h5>
+<p>Authentication, dashboards and scalable infrastructure built to grow with your business.</p>
 </div>
 
-<div class="col">
-<div class="card shadow-sm p-3">
-<h5>Frontend + Backend</h5>
-<p>Secure dashboard systems.</p>
-<h4 class="highlight">$230 USD</h4>
-</div>
+<div class="col-md-4">
+<div class="feature-icon mx-auto">02</div>
+<h5 class="fw-bold">Modern Frontend Interfaces</h5>
+<p>Clean, high-performance websites designed for trust and conversion.</p>
 </div>
 
-<div class="col">
-<div class="card shadow-sm p-3">
-<h5>Full Secure Platform</h5>
-<p>Complete scalable infrastructure.</p>
-<h4 class="highlight">$350 USD</h4>
-</div>
-</div>
-
-<div class="col">
-<div class="card shadow-sm p-3">
-<h5>Monthly Management</h5>
-<p>Maintenance & updates.</p>
-<h4 class="highlight">$10 USD / month</h4>
-</div>
+<div class="col-md-4">
+<div class="feature-icon mx-auto">03</div>
+<h5 class="fw-bold">AI-Ready Infrastructure</h5>
+<p>Systems built with the future in mind — automation, scalability and intelligence.</p>
 </div>
 
 </div>
-
-</div>
-</div>
-
-<section class="py-5 text-center bg-dark">
-<div class="container">
-<h3 class="highlight mb-3">Connect With Us</h3>
-<a href="https://wa.me/18768021941" target="_blank" class="btn btn-success me-3">
-WhatsApp
-</a>
-<a href="https://instagram.com/orviandigitalstudio" target="_blank" class="btn btn-outline-light">
-Instagram
-</a>
 </div>
 </section>
 
-</main>
+<!-- PRICING -->
+<section id="pricing" class="section bg-light">
+<div class="container text-center">
+<h2 class="fw-bold mb-5">Simple, Transparent Pricing</h2>
 
-<footer class="footer text-white py-4 text-center">
+<div class="row g-4">
+
+<div class="col-md-3">
+<div class="pricing-card">
+<h6>Front Page Website</h6>
+<h3 class="fw-bold mt-3">$100</h3>
+<p class="text-muted">Professional online presence.</p>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="pricing-card">
+<h6>Frontend + Backend</h6>
+<h3 class="fw-bold mt-3">$230</h3>
+<p class="text-muted">Secure dashboard systems.</p>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="pricing-card">
+<h6>Full Secure Platform</h6>
+<h3 class="fw-bold mt-3">$350</h3>
+<p class="text-muted">Complete scalable system.</p>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="pricing-card">
+<h6>Monthly Management</h6>
+<h3 class="fw-bold mt-3">$10/mo</h3>
+<p class="text-muted">Ongoing maintenance.</p>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer text-center">
 <div class="container">
-<p class="mb-1">Orvian Digital — Future Caribbean Technology</p>
-<small>© 2026 All Rights Reserved</small>
+<h5 class="fw-bold">Orvian Digital</h5>
+<p class="text-muted">
+Future Caribbean Technology. Built to scale. Here to stay.
+</p>
+<small class="text-muted">© 2026 Orvian Digital</small>
 </div>
 </footer>
 
