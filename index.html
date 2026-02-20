@@ -15,43 +15,36 @@ background:white;
 color:#111827;
 }
 
-.hero{
-padding:140px 0 100px 0;
-background:linear-gradient(180deg,#f8fafc 0%, #ffffff 100%);
-}
-
 .gradient-text{
 background:linear-gradient(90deg,#2563eb,#7c3aed);
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
 }
 
-.btn-primary{
-background:linear-gradient(90deg,#2563eb,#7c3aed);
-border:none;
-padding:14px 28px;
-font-weight:600;
-}
-
-.btn-primary:hover{
-opacity:0.9;
+.hero{
+padding:140px 0 100px 0;
+background:linear-gradient(180deg,#f1f5ff 0%, #ffffff 100%);
 }
 
 .section{
 padding:100px 0;
 }
 
-.feature-icon{
-width:50px;
-height:50px;
-border-radius:12px;
-background:linear-gradient(135deg,#2563eb,#7c3aed);
-display:flex;
-align-items:center;
-justify-content:center;
+.mockup{
+background:#0f172a;
 color:white;
-font-weight:bold;
-margin-bottom:20px;
+padding:80px;
+border-radius:20px;
+}
+
+.stats{
+background:#f8fafc;
+padding:60px 0;
+}
+
+.stat-number{
+font-size:40px;
+font-weight:700;
 }
 
 .pricing-card{
@@ -63,6 +56,12 @@ transition:0.3s;
 
 .pricing-card:hover{
 box-shadow:0 20px 40px rgba(0,0,0,0.08);
+}
+
+.cta-section{
+background:linear-gradient(90deg,#2563eb,#7c3aed);
+color:white;
+padding:100px 0;
 }
 
 .footer{
@@ -78,9 +77,7 @@ padding:60px 0;
 <nav class="navbar navbar-expand-lg bg-white border-bottom">
 <div class="container">
 <a class="navbar-brand fw-bold" href="#">Orvian Digital</a>
-<div>
-<a href="#pricing" class="btn btn-primary">Start Project</a>
-</div>
+<a href="https://wa.me/18768021941" class="btn btn-primary">Start Project</a>
 </div>
 </nav>
 
@@ -88,93 +85,115 @@ padding:60px 0;
 <section class="hero text-center">
 <div class="container">
 <h1 class="display-3 fw-bold">
-Build <span class="gradient-text">Future-Ready Digital Systems</span>
+Build <span class="gradient-text">Scalable Digital Infrastructure</span>
 </h1>
-
 <p class="lead mt-4 col-lg-8 mx-auto">
-Founded by Andrae Cunningham (24), Orvian Digital helps Jamaican businesses
-launch scalable websites, backend systems, and intelligent digital platforms.
-We believe AI and technology will shape the next era of our economy.
+Founded in Jamaica by Andrae Cunningham (24), Orvian Digital engineers
+secure websites, backend systems, and AI-ready platforms built for long-term growth.
 </p>
+<a href="#pricing" class="btn btn-primary btn-lg mt-4">View Pricing</a>
+</div>
+</section>
 
-<div class="mt-4">
-<a href="https://wa.me/18768021941" target="_blank" class="btn btn-primary me-3">
-Start Your Project
-</a>
-<a href="https://instagram.com/orviandigitalstudio" target="_blank" class="btn btn-outline-dark">
-Follow Us
-</a>
+<!-- STATS -->
+<section class="stats text-center">
+<div class="container">
+<div class="row">
+<div class="col-md-4">
+<div class="stat-number">24</div>
+<p>Years of Founder Age</p>
+</div>
+<div class="col-md-4">
+<div class="stat-number">100%</div>
+<p>Custom Built Solutions</p>
+</div>
+<div class="col-md-4">
+<div class="stat-number">AI</div>
+<p>Future Focused Systems</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- PLATFORM MOCKUP -->
+<section class="section">
+<div class="container">
+<div class="mockup text-center">
+<h2 class="fw-bold">Not Just Websites. Digital Systems.</h2>
+<p class="mt-3">
+We build structured infrastructure — authentication, dashboards,
+scalable data systems and intelligent automation layers.
+Built for Jamaica. Built for scale.
+</p>
 </div>
 </div>
 </section>
 
 <!-- FEATURES -->
-<section class="section">
+<section class="section text-center">
 <div class="container">
-<div class="row text-center">
-
+<div class="row">
 <div class="col-md-4">
-<div class="feature-icon mx-auto">01</div>
-<h5 class="fw-bold">Secure Backend Systems</h5>
-<p>Authentication, dashboards and scalable infrastructure built to grow with your business.</p>
+<h5 class="fw-bold">Secure Backend Architecture</h5>
+<p>Scalable database and authentication systems.</p>
 </div>
-
 <div class="col-md-4">
-<div class="feature-icon mx-auto">02</div>
-<h5 class="fw-bold">Modern Frontend Interfaces</h5>
-<p>Clean, high-performance websites designed for trust and conversion.</p>
+<h5 class="fw-bold">High-Performance UI</h5>
+<p>Modern frontend interfaces optimized for growth.</p>
 </div>
-
 <div class="col-md-4">
-<div class="feature-icon mx-auto">03</div>
-<h5 class="fw-bold">AI-Ready Infrastructure</h5>
-<p>Systems built with the future in mind — automation, scalability and intelligence.</p>
+<h5 class="fw-bold">AI Integration Ready</h5>
+<p>Systems structured for automation and intelligence.</p>
 </div>
-
 </div>
 </div>
 </section>
 
 <!-- PRICING -->
-<section id="pricing" class="section bg-light">
-<div class="container text-center">
-<h2 class="fw-bold mb-5">Simple, Transparent Pricing</h2>
-
+<section id="pricing" class="section bg-light text-center">
+<div class="container">
+<h2 class="fw-bold mb-5">Transparent Pricing</h2>
 <div class="row g-4">
 
 <div class="col-md-3">
 <div class="pricing-card">
 <h6>Front Page Website</h6>
-<h3 class="fw-bold mt-3">$100</h3>
-<p class="text-muted">Professional online presence.</p>
+<h3>$100</h3>
 </div>
 </div>
 
 <div class="col-md-3">
 <div class="pricing-card">
 <h6>Frontend + Backend</h6>
-<h3 class="fw-bold mt-3">$230</h3>
-<p class="text-muted">Secure dashboard systems.</p>
+<h3>$230</h3>
 </div>
 </div>
 
 <div class="col-md-3">
 <div class="pricing-card">
 <h6>Full Secure Platform</h6>
-<h3 class="fw-bold mt-3">$350</h3>
-<p class="text-muted">Complete scalable system.</p>
+<h3>$350</h3>
 </div>
 </div>
 
 <div class="col-md-3">
 <div class="pricing-card">
 <h6>Monthly Management</h6>
-<h3 class="fw-bold mt-3">$10/mo</h3>
-<p class="text-muted">Ongoing maintenance.</p>
+<h3>$10/mo</h3>
 </div>
 </div>
 
 </div>
+</div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section text-center">
+<div class="container">
+<h2 class="fw-bold">Ready to Build the Future?</h2>
+<a href="https://wa.me/18768021941" class="btn btn-light btn-lg mt-4">
+Start Your Project
+</a>
 </div>
 </section>
 
@@ -182,10 +201,8 @@ Follow Us
 <footer class="footer text-center">
 <div class="container">
 <h5 class="fw-bold">Orvian Digital</h5>
-<p class="text-muted">
-Future Caribbean Technology. Built to scale. Here to stay.
-</p>
-<small class="text-muted">© 2026 Orvian Digital</small>
+<p>Future Caribbean Technology • Built to Scale</p>
+<small>© 2026 All Rights Reserved</small>
 </div>
 </footer>
 
