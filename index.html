@@ -3,182 +3,105 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Orvian Digital | Jamaican Web Studio</title>
+<title>Orvian Digital | Founder Andrae Cunningham</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family: 'Segoe UI', sans-serif;
-scroll-behavior:smooth;
 }
 
 body{
-background:linear-gradient(135deg,#071326,#0e2a47);
+font-family:'Poppins',sans-serif;
 color:white;
-}
-
-header{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 8%;
-background:rgba(0,0,0,0.3);
-backdrop-filter:blur(8px);
-position:fixed;
-width:100%;
-top:0;
-z-index:1000;
-}
-
-.logo{
-font-size:22px;
-font-weight:bold;
-color:#00ff99;
-}
-
-nav a{
-color:white;
-text-decoration:none;
-margin-left:20px;
-font-size:14px;
-transition:0.3s;
-}
-
-nav a:hover{
-color:#00ff99;
+overflow:hidden;
 }
 
 .hero{
 height:100vh;
+background:
+linear-gradient(rgba(5,15,30,0.85), rgba(5,15,30,0.85)),
+url('profile.jpg');
+background-size:cover;
+background-position:center;
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
-padding:0 20px;
+padding:20px;
 }
 
-.hero h1{
-font-size:48px;
-margin-bottom:20px;
-background:linear-gradient(to right,#00ff99,#fcd34d);
+.brand{
+font-family:'Orbitron',sans-serif;
+font-size:42px;
+letter-spacing:3px;
+background:linear-gradient(90deg,#00ff99,#facc15);
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
+margin-bottom:20px;
 }
 
-.hero p{
+.typing{
+font-size:38px;
+max-width:850px;
+font-weight:600;
+min-height:60px;
+}
+
+.cursor{
+display:inline-block;
+background:#00ff99;
+width:3px;
+margin-left:5px;
+animation:blink 0.7s infinite;
+}
+
+@keyframes blink{
+0%{opacity:1;}
+50%{opacity:0;}
+100%{opacity:1;}
+}
+
+.subtext{
 max-width:650px;
-color:#ccc;
-margin-bottom:30px;
 font-size:18px;
+color:#ccc;
+margin:25px 0;
 }
 
 .btn{
-padding:14px 28px;
-border:none;
+padding:14px 30px;
 border-radius:30px;
-cursor:pointer;
-font-size:15px;
-margin:8px;
+background:#00ff99;
+color:black;
 text-decoration:none;
-display:inline-block;
+font-weight:600;
 transition:0.3s;
 }
 
-.btn-primary{
-background:#00ff99;
-color:black;
-}
-
-.btn-primary:hover{
+.btn:hover{
 background:#00cc77;
 }
 
-.btn-secondary{
-background:#fcd34d;
-color:black;
-}
-
-.section{
-padding:100px 8%;
-}
-
-.section h2{
-text-align:center;
-margin-bottom:60px;
-font-size:32px;
-color:#00ff99;
-}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:30px;
-}
-
-.card{
-background:#102a44;
-padding:30px;
-border-radius:15px;
-transition:0.3s;
-}
-
-.card:hover{
-transform:translateY(-8px);
-background:#16385c;
-}
-
-.card h3{
-margin-bottom:15px;
-color:#fcd34d;
-}
-
-.price{
-font-size:22px;
-margin:15px 0;
-color:#00ff99;
-}
-
-.testimonial{
-background:#102a44;
-padding:25px;
-border-radius:12px;
-font-size:14px;
-color:#ddd;
-}
-
-footer{
-text-align:center;
-padding:40px 20px;
-background:#081726;
-}
-
-footer a{
-color:#00ff99;
-text-decoration:none;
-display:block;
-margin:6px 0;
-}
-
-/* Floating WhatsApp */
-.whatsapp{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-color:white;
-padding:15px 18px;
-border-radius:50%;
-font-size:20px;
-text-decoration:none;
-box-shadow:0 4px 10px rgba(0,0,0,0.3);
+.founder{
+font-size:15px;
+color:#facc15;
+margin-top:20px;
 }
 
 @media(max-width:768px){
-.hero h1{
-font-size:34px;
+.brand{
+font-size:26px;
+}
+.typing{
+font-size:22px;
+}
+.subtext{
+font-size:14px;
 }
 }
 </style>
@@ -186,124 +109,43 @@ font-size:34px;
 
 <body>
 
-<header>
-<div class="logo">Orvian Digital 🇯🇲</div>
-<nav>
-<a href="#services">Services</a>
-<a href="#pricing">Pricing</a>
-<a href="#contact">Contact</a>
-</nav>
-</header>
-
 <section class="hero">
-<h1>Affordable Websites for Growing Businesses</h1>
-<p>
-We build clean, secure and powerful websites for Jamaican entrepreneurs.
-From simple pages to full backend systems — we help your business grow online.
+
+<div class="brand">ORVIAN DIGITAL</div>
+
+<div class="typing">
+<span id="typed-text"></span><span class="cursor"></span>
+</div>
+
+<p class="subtext">
+Modern websites. Secure systems. Real digital growth for businesses ready to scale.
 </p>
 
-<a class="btn btn-primary" href="https://wa.me/18768021941?text=Hi%20Orvian%20Digital%2C%20I%20want%20a%20website." target="_blank">
-Start on WhatsApp
+<a class="btn" href="https://wa.me/18768021941?text=Hi%20Orvian%20Digital%2C%20I%20want%20to%20build%20a%20website." target="_blank">
+Start Your Project
 </a>
 
-<a class="btn btn-secondary" href="https://instagram.com/orviandigitalstudio" target="_blank">
-Visit Instagram
-</a>
+<div class="founder">
+Founder – Andrae Cunningham | 24 | Passionate Web Developer 🇯🇲
+</div>
+
 </section>
 
-<section id="services" class="section">
-<h2>What We Offer</h2>
-<div class="grid">
+<script>
+const text = "Building Powerful Digital Experiences for the Next Generation of Businesses.";
+let index = 0;
+const speed = 40;
 
-<div class="card">
-<h3>Website Design</h3>
-<p>Modern, responsive business websites built to attract customers.</p>
-</div>
+function typeEffect(){
+if(index < text.length){
+document.getElementById("typed-text").innerHTML += text.charAt(index);
+index++;
+setTimeout(typeEffect, speed);
+}
+}
 
-<div class="card">
-<h3>Backend Development</h3>
-<p>Secure admin dashboards, login systems and custom tools.</p>
-</div>
-
-<div class="card">
-<h3>Full Stack Platforms</h3>
-<p>Complete functional systems for bookings, stores & management.</p>
-</div>
-
-<div class="card">
-<h3>Maintenance</h3>
-<p>Monthly updates, security checks and performance optimization.</p>
-</div>
-
-</div>
-</section>
-
-<section id="pricing" class="section">
-<h2>Service Pricing</h2>
-<div class="grid">
-
-<div class="card">
-<h3>Basic Website</h3>
-<div class="price">$100 USD</div>
-<p>Perfect for startups and small businesses.</p>
-</div>
-
-<div class="card">
-<h3>Frontend + Backend</h3>
-<div class="price">$230 USD</div>
-<p>Secure dashboard and full integration.</p>
-</div>
-
-<div class="card">
-<h3>Full Secure System</h3>
-<div class="price">$350 USD</div>
-<p>Complete business platform with advanced features.</p>
-</div>
-
-<div class="card">
-<h3>Maintenance Plan</h3>
-<div class="price">$10 USD / month</div>
-<p>Ongoing updates and support subscription.</p>
-</div>
-
-</div>
-</section>
-
-<section class="section">
-<h2>What Clients Say</h2>
-<div class="grid">
-
-<div class="testimonial">
-“Orvian Digital built my business website and I started getting customers immediately.”
-</div>
-
-<div class="testimonial">
-“Professional, affordable and easy to work with.”
-</div>
-
-<div class="testimonial">
-“My website looks modern and secure. Highly recommended.”
-</div>
-
-</div>
-</section>
-
-<section id="contact" class="section">
-<h2>Contact Us</h2>
-<p style="text-align:center;margin-bottom:20px;">
-📲 802-1941 | 369-2330  
-📩 OrvianStudio@gmail.com  
-🌐 orvianstudio.com
-</p>
-</section>
-
-<footer>
-<p>© 2026 Orvian Digital. All Rights Reserved.</p>
-<a href="https://instagram.com/orviandigitalstudio" target="_blank">Instagram</a>
-<a href="https://wa.me/18768021941" target="_blank">WhatsApp</a>
-</footer>
-
-<a class="whatsapp" href="https://wa.me/18768021941" target="_blank">💬</a>
+window.onload = typeEffect;
+</script>
 
 </body>
 </html>
