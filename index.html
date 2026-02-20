@@ -3,54 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Orvian Digital | Digital Systems Architect</title>
+<title>Orvian Digital | Future Caribbean Tech</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-scroll-behavior:smooth;
-}
+*{margin:0;padding:0;box-sizing:border-box;}
 
 body{
-font-family:'Inter',sans-serif;
-background:#0c1117;
-color:#e5e7eb;
-line-height:1.7;
-}
-
-nav{
-position:fixed;
-top:0;
-width:100%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:24px 10%;
-background:rgba(12,17,23,0.85);
-backdrop-filter:blur(12px);
-border-bottom:1px solid #1f2937;
-}
-
-.logo{
-font-weight:600;
-letter-spacing:1px;
-color:#10b981;
-}
-
-nav a{
-text-decoration:none;
-color:#9ca3af;
-margin-left:30px;
-font-size:14px;
-transition:0.3s;
-}
-
-nav a:hover{
-color:#10b981;
+font-family:'Poppins',sans-serif;
+background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+color:white;
+overflow-x:hidden;
 }
 
 .hero{
@@ -58,147 +22,173 @@ height:100vh;
 display:flex;
 flex-direction:column;
 justify-content:center;
-padding:0 10%;
-max-width:1000px;
+align-items:center;
+text-align:center;
+padding:20px;
+background:radial-gradient(circle at top,#ff0080,#1e3c72 70%);
+}
+
+.logo{
+font-family:'Orbitron',sans-serif;
+font-size:48px;
+letter-spacing:4px;
+background:linear-gradient(90deg,#00ffcc,#ff00aa);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+margin-bottom:20px;
+animation:glow 3s infinite alternate;
+}
+
+@keyframes glow{
+from{filter:drop-shadow(0 0 5px #00ffcc);}
+to{filter:drop-shadow(0 0 20px #ff00aa);}
 }
 
 .hero h1{
-font-size:56px;
-font-weight:700;
+font-size:40px;
 margin-bottom:20px;
-color:white;
 }
 
 .hero p{
-font-size:20px;
-color:#9ca3af;
 max-width:700px;
-margin-bottom:30px;
-}
-
-.highlight{
-color:#10b981;
-}
-
-.btn{
-display:inline-block;
-padding:14px 30px;
-border:1px solid #10b981;
-color:#10b981;
-text-decoration:none;
-border-radius:6px;
-font-weight:600;
-transition:0.3s;
-}
-
-.btn:hover{
-background:#10b981;
-color:#0c1117;
+font-size:18px;
+opacity:0.9;
 }
 
 .section{
-padding:120px 10%;
-max-width:1100px;
+padding:100px 10%;
+background:#121b2b;
 }
 
 .section h2{
 font-size:32px;
 margin-bottom:30px;
-}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:40px;
-margin-top:40px;
+color:#00ffcc;
 }
 
 .card{
-background:#111827;
+background:#1c2940;
 padding:30px;
+margin-bottom:20px;
 border-radius:10px;
-border:1px solid #1f2937;
-transition:0.3s;
 }
 
-.card:hover{
-border-color:#10b981;
-box-shadow:0 0 20px rgba(16,185,129,0.15);
+.price{
+color:#ff00aa;
+font-weight:bold;
+margin-top:10px;
+}
+
+.btn{
+display:inline-block;
+margin-top:20px;
+padding:12px 25px;
+border-radius:30px;
+background:linear-gradient(90deg,#00ffcc,#ff00aa);
+color:black;
+font-weight:600;
+text-decoration:none;
+}
+
+.social{
+text-align:center;
+padding:40px;
+background:#0f2027;
+}
+
+.social a{
+margin:0 15px;
+font-size:20px;
+text-decoration:none;
+color:#00ffcc;
 }
 
 footer{
-padding:60px 10%;
-color:#6b7280;
-border-top:1px solid #1f2937;
-margin-top:100px;
+text-align:center;
+padding:20px;
+background:#0b1624;
+font-size:14px;
 }
 
-@media(max-width:768px){
-.hero h1{
-font-size:36px;
-}
+/* AI Chat Bubble */
+.chat{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#ff00aa;
+padding:15px;
+border-radius:50%;
+cursor:pointer;
 }
 </style>
 </head>
 
 <body>
 
-<nav>
-<div class="logo">Orvian Digital</div>
-<div>
-<a href="#architecture">Architecture</a>
-<a href="#contact">Contact</a>
-</div>
-</nav>
-
 <section class="hero">
-<h1>
-Digital Infrastructure <span class="highlight">Engineered For The Future</span>
-</h1>
+<div class="logo">ORVIAN DIGITAL</div>
+<h1>Future Tech Built From Jamaica 🇯🇲</h1>
 <p>
-Founded by Andrae Cunningham, 24-year-old Digital Systems Architect focused on building secure, scalable and intelligent digital ecosystems for modern businesses.
+Mi start this journey from scratch — learning to code, build websites, develop apps,
+and understand how technology can change Jamaica economy.
+From small business websites to full systems, we nah stop build.
+AI and digital growth is the future — and Jamaica ago be part of it.
 </p>
-
-<a href="https://wa.me/18768021941" class="btn" target="_blank">
-Start a Project
-</a>
+<a href="https://wa.me/18768021941" class="btn" target="_blank">Start With Us</a>
 </section>
 
-<section id="architecture" class="section">
-<h2>Core Architecture</h2>
-
-<div class="grid">
-<div class="card">
-<h3>Secure Backend Systems</h3>
-<p>Authentication, dashboards and scalable data structures designed for long-term growth.</p>
-</div>
-
-<div class="card">
-<h3>High-Performance Interfaces</h3>
-<p>Modern frontend systems built for clarity, trust and measurable conversion.</p>
-</div>
-
-<div class="card">
-<h3>Scalable Digital Platforms</h3>
-<p>Full digital ecosystems engineered for automation and expansion.</p>
-</div>
-
-<div class="card">
-<h3>Continuous Optimization</h3>
-<p>Ongoing refinement, security updates and performance upgrades.</p>
-</div>
-</div>
+<section class="section">
+<h2>How It Started</h2>
+<p>
+At 24, Andrae Cunningham founded Orvian Digital with one vision —
+create digital systems that empower local businesses across Jamaica.
+Learning frontend, backend, app development and AI concepts,
+this is not just business — this is passion.
+We deh yah fi stay. We building future infrastructure.
+</p>
 </section>
 
-<section id="contact" class="section">
-<h2>Contact</h2>
-<p>Email: OrvianStudio@gmail.com</p>
-<p>Instagram: @orviandigitalstudio</p>
+<section class="section">
+<h2>Services & Pricing</h2>
+
+<div class="card">
+<h3>Simple Front Page Website</h3>
+<p>Clean business presence online.</p>
+<div class="price">$100 USD</div>
+</div>
+
+<div class="card">
+<h3>Frontend + Backend Development</h3>
+<p>Dashboard systems & secure functionality.</p>
+<div class="price">$230 USD</div>
+</div>
+
+<div class="card">
+<h3>Full Secure Functional System</h3>
+<p>Complete scalable digital infrastructure.</p>
+<div class="price">$350 USD</div>
+</div>
+
+<div class="card">
+<h3>Monthly Management</h3>
+<p>Maintenance & updates subscription.</p>
+<div class="price">$10 USD / month</div>
+</div>
+
 </section>
+
+<div class="social">
+<a href="https://instagram.com/orviandigitalstudio" target="_blank">Instagram</a>
+<a href="https://wa.me/18768021941" target="_blank">WhatsApp</a>
+</div>
 
 <footer>
-© 2026 Orvian Digital — Digital Systems Architect
+© 2026 Orvian Digital — Future Caribbean Technology
 </footer>
+
+<div class="chat" onclick="alert('AI Help coming soon! Tell us your business idea on WhatsApp.')">
+💬
+</div>
 
 </body>
 </html>
