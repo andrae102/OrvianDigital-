@@ -1,211 +1,936 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Orvian Digital | Digital Infrastructure Platform</title>
+<title>Orvian Digital | Build Scalable Digital Infrastructure</title>
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 <style>
-body{
-font-family:'Inter',sans-serif;
-background:white;
-color:#111827;
+:root {
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
+    --purple: #7c3aed;
+    --purple-dark: #6d28d9;
+    --dark: #0f172a;
+    --gray: #64748b;
+    --light-gray: #f1f5f9;
 }
 
-.gradient-text{
-background:linear-gradient(90deg,#2563eb,#7c3aed);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.hero{
-padding:140px 0 100px 0;
-background:linear-gradient(180deg,#f1f5ff 0%, #ffffff 100%);
+body {
+    font-family: 'Inter', sans-serif;
+    background: white;
+    color: #111827;
+    line-height: 1.6;
+    overflow-x: hidden;
 }
 
-.section{
-padding:100px 0;
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
 }
 
-.mockup{
-background:#0f172a;
-color:white;
-padding:80px;
-border-radius:20px;
+/* Navbar */
+.navbar {
+    padding: 20px 0;
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
 }
 
-.stats{
-background:#f8fafc;
-padding:60px 0;
+.navbar-brand {
+    font-size: 24px;
+    font-weight: 800;
+    background: linear-gradient(90deg, #2563eb, #7c3aed);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-.stat-number{
-font-size:40px;
-font-weight:700;
+.nav-link {
+    font-weight: 500;
+    color: #64748b;
+    margin: 0 15px;
+    transition: color 0.3s;
 }
 
-.pricing-card{
-border:1px solid #e5e7eb;
-border-radius:16px;
-padding:40px;
-transition:0.3s;
+.nav-link:hover {
+    color: var(--primary);
 }
 
-.pricing-card:hover{
-box-shadow:0 20px 40px rgba(0,0,0,0.08);
+/* Buttons */
+.btn {
+    padding: 14px 32px;
+    font-weight: 600;
+    border-radius: 10px;
+    border: none;
+    transition: all 0.3s ease;
 }
 
-.cta-section{
-background:linear-gradient(90deg,#2563eb,#7c3aed);
-color:white;
-padding:100px 0;
+.btn-primary {
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+    box-shadow: 0 10px 30px rgba(37, 99, 235, 0.3);
 }
 
-.footer{
-background:#f8fafc;
-padding:60px 0;
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 40px rgba(37, 99, 235, 0.4);
+}
+
+.btn-outline {
+    background: white;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+}
+
+.btn-outline:hover {
+    background: var(--primary);
+    color: white;
+}
+
+.btn-lg {
+    padding: 18px 40px;
+    font-size: 18px;
+}
+
+.btn-light {
+    background: white;
+    color: var(--primary);
+}
+
+.btn-light:hover {
+    background: var(--light-gray);
+    color: var(--primary-dark);
+}
+
+/* Gradient Text */
+.gradient-text {
+    background: linear-gradient(90deg, #2563eb, #7c3aed);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+}
+
+/* Hero Section */
+.hero {
+    padding: 160px 0 120px 0;
+    background: linear-gradient(180deg, #f1f5ff 0%, #ffffff 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 800px;
+    height: 800px;
+    background: radial-gradient(circle, rgba(124, 58, 237, 0.1), transparent);
+    border-radius: 50%;
+    animation: float 20s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-30px); }
+}
+
+.hero h1 {
+    font-size: 72px;
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 30px;
+    animation: fadeInUp 0.8s ease;
+}
+
+.hero .lead {
+    font-size: 22px;
+    color: var(--gray);
+    font-weight: 400;
+    animation: fadeInUp 1s ease;
+}
+
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: white;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    margin-bottom: 30px;
+    font-weight: 600;
+    font-size: 14px;
+    animation: fadeInUp 0.6s ease;
+}
+
+.hero-badge::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+    border-radius: 50%;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.2); }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Stats Section */
+.stats {
+    background: white;
+    padding: 80px 0;
+    border-top: 1px solid #e5e7eb;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.stat-box {
+    text-align: center;
+    padding: 30px;
+}
+
+.stat-number {
+    font-size: 56px;
+    font-weight: 900;
+    background: linear-gradient(90deg, #2563eb, #7c3aed);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+}
+
+.stat-label {
+    font-size: 16px;
+    color: var(--gray);
+    font-weight: 500;
+}
+
+/* Platform Mockup Section */
+.mockup-section {
+    padding: 120px 0;
+    background: var(--dark);
+    color: white;
+    text-align: center;
+}
+
+.mockup {
+    background: linear-gradient(135deg, #1e293b, #0f172a);
+    padding: 80px;
+    border-radius: 24px;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mockup h2 {
+    font-size: 48px;
+    font-weight: 900;
+    margin-bottom: 24px;
+}
+
+.mockup p {
+    font-size: 20px;
+    color: #94a3b8;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Features Section */
+.features {
+    padding: 120px 0;
+    background: white;
+}
+
+.feature-card {
+    padding: 40px;
+    border-radius: 16px;
+    background: var(--light-gray);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    background: white;
+    border: 1px solid #e5e7eb;
+}
+
+.feature-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.feature-card h5 {
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.feature-card p {
+    color: var(--gray);
+    font-size: 16px;
+}
+
+/* Section Titles */
+.section-title {
+    font-size: 48px;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+.section-subtitle {
+    font-size: 20px;
+    color: var(--gray);
+    margin-bottom: 60px;
+}
+
+/* Pricing Section */
+.pricing {
+    padding: 120px 0;
+    background: var(--light-gray);
+}
+
+.pricing-card {
+    background: white;
+    border: 2px solid #e5e7eb;
+    border-radius: 20px;
+    padding: 50px 40px;
+    transition: all 0.3s ease;
+    height: 100%;
+    position: relative;
+}
+
+.pricing-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+    border-color: var(--primary);
+}
+
+.pricing-card.featured {
+    border: 3px solid var(--primary);
+    box-shadow: 0 20px 50px rgba(37, 99, 235, 0.2);
+}
+
+.pricing-badge {
+    position: absolute;
+    top: -15px;
+    right: 30px;
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.pricing-card h6 {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--gray);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.pricing-card h3 {
+    font-size: 48px;
+    font-weight: 900;
+    color: var(--dark);
+    margin-bottom: 10px;
+}
+
+.pricing-card .price-note {
+    font-size: 14px;
+    color: var(--gray);
+    margin-bottom: 30px;
+}
+
+.pricing-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 30px 0;
+}
+
+.pricing-card li {
+    padding: 12px 0;
+    color: var(--dark);
+    font-weight: 500;
+}
+
+.pricing-card li::before {
+    content: '✓';
+    color: var(--primary);
+    font-weight: 900;
+    margin-right: 12px;
+}
+
+/* Services Section */
+.services {
+    padding: 120px 0;
+    background: white;
+}
+
+.service-box {
+    background: var(--light-gray);
+    padding: 50px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+}
+
+.service-box:hover {
+    background: white;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    transform: translateX(10px);
+}
+
+.service-box h4 {
+    font-weight: 800;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.service-box p {
+    color: var(--gray);
+    font-size: 16px;
+}
+
+/* CTA Section */
+.cta-section {
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+    color: white;
+    padding: 120px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent);
+    animation: rotate 30s linear infinite;
+}
+
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.cta-section h2 {
+    font-size: 56px;
+    font-weight: 900;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 1;
+}
+
+.cta-section p {
+    font-size: 22px;
+    margin-bottom: 40px;
+    opacity: 0.9;
+    position: relative;
+    z-index: 1;
+}
+
+/* Footer */
+.footer {
+    background: var(--dark);
+    color: white;
+    padding: 80px 0 40px;
+}
+
+.footer h5 {
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.footer p {
+    color: #94a3b8;
+    font-size: 16px;
+}
+
+.footer small {
+    color: #64748b;
+}
+
+/* Process Section */
+.process {
+    padding: 120px 0;
+    background: white;
+}
+
+.process-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.process-number {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    font-weight: 900;
+    flex-shrink: 0;
+}
+
+.process-content h4 {
+    font-weight: 800;
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+.process-content p {
+    color: var(--gray);
+    font-size: 16px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 42px;
+    }
+    
+    .hero .lead {
+        font-size: 18px;
+    }
+    
+    .section-title {
+        font-size: 36px;
+    }
+    
+    .mockup {
+        padding: 40px 30px;
+    }
+    
+    .mockup h2 {
+        font-size: 32px;
+    }
+    
+    .pricing-card {
+        margin-bottom: 30px;
+    }
+    
+    .cta-section h2 {
+        font-size: 36px;
+    }
 }
 </style>
+
 </head>
 
 <body>
 
 <!-- NAV -->
-<nav class="navbar navbar-expand-lg bg-white border-bottom">
-<div class="container">
-<a class="navbar-brand fw-bold" href="#">Orvian Digital</a>
-<a href="https://wa.me/18768021941" class="btn btn-primary">Start Project</a>
-</div>
+
+<nav class="navbar navbar-expand-lg">
+    <div class="container">
+        <a class="navbar-brand" href="#">Orvian Digital</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto align-items-center">
+                <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
+                <li class="nav-item"><a class="nav-link" href="#process">Process</a></li>
+                <li class="nav-item ms-3">
+                    <a href="https://wa.me/18768021941" class="btn btn-primary">Start Project</a>
+                </li>
+            </ul>
+        </div>
+    </div>
 </nav>
 
 <!-- HERO -->
-<section class="hero text-center">
-<div class="container">
-<h1 class="display-3 fw-bold">
-Build <span class="gradient-text">Scalable Digital Infrastructure</span>
-</h1>
-<p class="lead mt-4 col-lg-8 mx-auto">
-Founded in Jamaica by Andrae Cunningham (24), Orvian Digital engineers
-secure websites, backend systems, and AI-ready platforms built for long-term growth.
-</p>
-<a href="#pricing" class="btn btn-primary btn-lg mt-4">View Pricing</a>
-</div>
+
+<section class="hero">
+    <div class="container">
+        <div class="text-center">
+            <div class="hero-badge">
+                Founded in Jamaica • Built for Scale
+            </div>
+            <h1>
+                Build <span class="gradient-text">Scalable Digital<br>Infrastructure</span>
+            </h1>
+            <p class="lead col-lg-8 mx-auto">
+                Founded by Andrae Cunningham (24), Orvian Digital engineers secure websites, 
+                backend systems, and AI-ready platforms built for long-term growth. Making professional 
+                digital services accessible to Caribbean businesses.
+            </p>
+            <div class="mt-5">
+                <a href="#pricing" class="btn btn-primary btn-lg me-3">View Pricing</a>
+                <a href="#services" class="btn btn-outline btn-lg">See What We Build</a>
+            </div>
+        </div>
+    </div>
 </section>
 
 <!-- STATS -->
-<section class="stats text-center">
-<div class="container">
-<div class="row">
-<div class="col-md-4">
-<div class="stat-number">24</div>
-<p>Years of Founder Age</p>
-</div>
-<div class="col-md-4">
-<div class="stat-number">100%</div>
-<p>Custom Built Solutions</p>
-</div>
-<div class="col-md-4">
-<div class="stat-number">AI</div>
-<p>Future Focused Systems</p>
-</div>
-</div>
-</div>
+
+<section class="stats">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="stat-box">
+                    <div class="stat-number">24</div>
+                    <div class="stat-label">Years of Founder Age</div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="stat-box">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Custom Built</div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="stat-box">
+                    <div class="stat-number">🇯🇲</div>
+                    <div class="stat-label">Jamaica Based</div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="stat-box">
+                    <div class="stat-number">AI</div>
+                    <div class="stat-label">Future Ready</div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
 <!-- PLATFORM MOCKUP -->
-<section class="section">
-<div class="container">
-<div class="mockup text-center">
-<h2 class="fw-bold">Not Just Websites. Digital Systems.</h2>
-<p class="mt-3">
-We build structured infrastructure — authentication, dashboards,
-scalable data systems and intelligent automation layers.
-Built for Jamaica. Built for scale.
-</p>
-</div>
-</div>
+
+<section class="mockup-section">
+    <div class="container">
+        <div class="mockup">
+            <h2>Not Just Websites. Digital Systems.</h2>
+            <p class="mt-4">
+                We build structured infrastructure — authentication, dashboards, 
+                scalable data systems and intelligent automation layers. 
+                Built for Jamaica. Built for scale. Built for the future.
+            </p>
+        </div>
+    </div>
 </section>
 
 <!-- FEATURES -->
-<section class="section text-center">
-<div class="container">
-<div class="row">
-<div class="col-md-4">
-<h5 class="fw-bold">Secure Backend Architecture</h5>
-<p>Scalable database and authentication systems.</p>
-</div>
-<div class="col-md-4">
-<h5 class="fw-bold">High-Performance UI</h5>
-<p>Modern frontend interfaces optimized for growth.</p>
-</div>
-<div class="col-md-4">
-<h5 class="fw-bold">AI Integration Ready</h5>
-<p>Systems structured for automation and intelligence.</p>
-</div>
-</div>
-</div>
+
+<section class="features">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="section-title">What We Build</h2>
+            <p class="section-subtitle">Enterprise-grade systems at startup prices</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h5>Secure Backend Architecture</h5>
+                    <p>Scalable database and authentication systems built with industry-standard security protocols.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h5>High-Performance UI</h5>
+                    <p>Modern frontend interfaces optimized for speed, SEO, and growth across all devices.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <div class="feature-icon">🤖</div>
+                    <h5>AI Integration Ready</h5>
+                    <p>Systems structured for automation and intelligence, ready for the AI-first future.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h5>Admin Dashboards</h5>
+                    <p>Custom control panels to manage users, content, and data with ease.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <div class="feature-icon">🛒</div>
+                    <h5>E-Commerce Systems</h5>
+                    <p>Full-featured online stores with secure payments and inventory management.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h5>Responsive Design</h5>
+                    <p>Beautiful interfaces that work flawlessly on desktop, tablet, and mobile.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SERVICES -->
+
+<section id="services" class="services">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="section-title">Our Services</h2>
+            <p class="section-subtitle">Comprehensive digital solutions for growing businesses</p>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="service-box">
+                    <h4>🌐 Website Design & Development</h4>
+                    <p>Custom-built websites from simple landing pages to complex multi-page sites with CMS integration.</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="service-box">
+                    <h4>🛒 E-Commerce Platforms</h4>
+                    <p>Full-featured online stores with product management, secure checkout, and payment processing.</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="service-box">
+                    <h4>👤 User Authentication Systems</h4>
+                    <p>Secure login, registration, user roles, and profile management for web applications.</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="service-box">
+                    <h4>🔧 Custom Web Applications</h4>
+                    <p>Database-driven applications with admin dashboards and custom functionality tailored to your needs.</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
 <!-- PRICING -->
-<section id="pricing" class="section bg-light text-center">
-<div class="container">
-<h2 class="fw-bold mb-5">Transparent Pricing</h2>
-<div class="row g-4">
 
-<div class="col-md-3">
-<div class="pricing-card">
-<h6>Front Page Website</h6>
-<h3>$100</h3>
-</div>
-</div>
+<section id="pricing" class="pricing">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="section-title">Transparent Pricing</h2>
+            <p class="section-subtitle">Professional digital infrastructure without the enterprise price tag</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-3">
+                <div class="pricing-card">
+                    <h6>Landing Page</h6>
+                    <h3>$100</h3>
+                    <p class="price-note">One-time payment</p>
+                    <ul>
+                        <li>Single page website</li>
+                        <li>Responsive design</li>
+                        <li>Contact form</li>
+                        <li>SEO basics</li>
+                        <li>Fast hosting</li>
+                    </ul>
+                    <a href="https://wa.me/18768021941?text=I'm%20interested%20in%20Landing%20Page" class="btn btn-outline w-100">Get Started</a>
+                </div>
+            </div>
 
-<div class="col-md-3">
-<div class="pricing-card">
-<h6>Frontend + Backend</h6>
-<h3>$230</h3>
+```
+        <div class="col-md-3">
+            <div class="pricing-card">
+                <h6>Frontend + Backend</h6>
+                <h3>$230</h3>
+                <p class="price-note">One-time payment</p>
+                <ul>
+                    <li>Multi-page website</li>
+                    <li>Database integration</li>
+                    <li>Content management</li>
+                    <li>Admin panel</li>
+                    <li>Email integration</li>
+                </ul>
+                <a href="https://wa.me/18768021941?text=I'm%20interested%20in%20Frontend%20+%20Backend" class="btn btn-outline w-100">Get Started</a>
+            </div>
+        </div>
+        
+        <div class="col-md-3">
+            <div class="pricing-card featured">
+                <div class="pricing-badge">Most Popular</div>
+                <h6>Full Secure Platform</h6>
+                <h3>$350</h3>
+                <p class="price-note">One-time payment</p>
+                <ul>
+                    <li>Everything in Backend+</li>
+                    <li>User authentication</li>
+                    <li>User roles & permissions</li>
+                    <li>Secure dashboards</li>
+                    <li>API integrations</li>
+                </ul>
+                <a href="https://wa.me/18768021941?text=I'm%20interested%20in%20Full%20Secure%20Platform" class="btn btn-primary w-100">Get Started</a>
+            </div>
+        </div>
+        
+        <div class="col-md-3">
+            <div class="pricing-card">
+                <h6>Monthly Management</h6>
+                <h3>$10<span style="font-size: 20px; font-weight: 600;">/mo</span></h3>
+                <p class="price-note">Ongoing support</p>
+                <ul>
+                    <li>Content updates</li>
+                    <li>Security patches</li>
+                    <li>Performance monitoring</li>
+                    <li>Technical support</li>
+                    <li>Backup & recovery</li>
+                </ul>
+                <a href="https://wa.me/18768021941?text=I'm%20interested%20in%20Monthly%20Management" class="btn btn-outline w-100">Get Started</a>
+            </div>
+        </div>
+    </div>
 </div>
-</div>
+```
 
-<div class="col-md-3">
-<div class="pricing-card">
-<h6>Full Secure Platform</h6>
-<h3>$350</h3>
-</div>
-</div>
+</section>
 
-<div class="col-md-3">
-<div class="pricing-card">
-<h6>Monthly Management</h6>
-<h3>$10/mo</h3>
-</div>
-</div>
+<!-- PROCESS -->
 
-</div>
-</div>
+<section id="process" class="process">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="section-title">Our Process</h2>
+            <p class="section-subtitle">From idea to launch in 4 simple steps</p>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="process-step">
+                    <div class="process-number">1</div>
+                    <div class="process-content">
+                        <h4>Discovery & Planning</h4>
+                        <p>We discuss your goals, requirements, and vision to create a detailed project roadmap.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="process-step">
+                    <div class="process-number">2</div>
+                    <div class="process-content">
+                        <h4>Design & Development</h4>
+                        <p>We build your custom solution with regular updates and opportunities for feedback.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="process-step">
+                    <div class="process-number">3</div>
+                    <div class="process-content">
+                        <h4>Testing & Refinement</h4>
+                        <p>Thorough testing across devices and browsers to ensure everything works perfectly.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="process-step">
+                    <div class="process-number">4</div>
+                    <div class="process-content">
+                        <h4>Launch & Support</h4>
+                        <p>We deploy your site and provide ongoing support to ensure continued success.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
 <!-- CTA -->
-<section class="cta-section text-center">
-<div class="container">
-<h2 class="fw-bold">Ready to Build the Future?</h2>
-<a href="https://wa.me/18768021941" class="btn btn-light btn-lg mt-4">
-Start Your Project
-</a>
-</div>
+
+<section class="cta-section">
+    <div class="container">
+        <h2>Ready to Build the Future?</h2>
+        <p>Let's create something amazing together</p>
+        <a href="https://wa.me/18768021941?text=Hi!%20I'd%20like%20to%20start%20a%20project." class="btn btn-light btn-lg">
+            Start Your Project Today
+        </a>
+    </div>
 </section>
 
 <!-- FOOTER -->
+
 <footer class="footer text-center">
-<div class="container">
-<h5 class="fw-bold">Orvian Digital</h5>
-<p>Future Caribbean Technology • Built to Scale</p>
-<small>© 2026 All Rights Reserved</small>
-</div>
+    <div class="container">
+        <h5>Orvian Digital</h5>
+        <p class="mt-3">Future Caribbean Technology • Built to Scale</p>
+        <p class="mt-4">
+            <a href="https://wa.me/18768021941" style="color: #94a3b8; text-decoration: none;">WhatsApp: +1 (876) 802-1941</a>
+        </p>
+        <small class="mt-5 d-block">© 2026 Orvian Digital. All Rights Reserved.</small>
+    </div>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
+
+// Navbar scroll effect
+window.addEventListener('scroll', function() {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 50) {
+        navbar.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.1)';
+    } else {
+        navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.05)';
+    }
+});
+</script>
+
 </body>
 </html>
